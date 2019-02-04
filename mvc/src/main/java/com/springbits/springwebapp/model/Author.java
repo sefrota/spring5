@@ -30,6 +30,8 @@ public class Author {
         this.lastName = lastName;
     }
 
+    public Author(){}
+
     public String getFirstName() {
         return firstName;
     }
