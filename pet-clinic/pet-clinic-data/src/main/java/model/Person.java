@@ -3,7 +3,7 @@ package model;
 /**
  * Created by sergioletras on 07/02/19.
  */
-public class Person {
+public class Person extends BaseEntity{
 
     private String firstName;
     private String lastName;

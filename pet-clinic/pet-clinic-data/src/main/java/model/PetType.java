@@ -3,7 +3,7 @@ package model;
 /**
  * Created by sergioletras on 07/02/19.
  */
-public class PetType {
+public class PetType extends BaseEntity{
 
     private String name;
 
