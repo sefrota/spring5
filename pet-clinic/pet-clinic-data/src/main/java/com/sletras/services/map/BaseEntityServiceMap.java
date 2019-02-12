@@ -1,6 +1,6 @@
-package services.map;
+package com.sletras.services.map;
 
-import services.CrudService;
+import com.sletras.services.CrudService;
 
 /**
  * Created by sergioletras on 11/02/19.

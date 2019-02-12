@@ -1,7 +1,7 @@
-package services.map;
+package com.sletras.services.map;
 
-import model.Owner;
-import services.OwnerService;
+import com.sletras.model.Owner;
+import com.sletras.services.OwnerService;
 
 import java.util.Map;
 

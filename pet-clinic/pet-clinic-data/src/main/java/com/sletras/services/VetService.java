@@ -1,8 +1,6 @@
-package services;
+package com.sletras.services;
 
-import model.Vet;
-
-import java.util.Set;
+import com.sletras.model.Vet;
 
 /**
  * Created by sergioletras on 09/02/19.

@@ -1,4 +1,4 @@
-package services;
+package com.sletras.services;
 
 import java.util.Set;
 

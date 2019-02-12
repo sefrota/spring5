@@ -1,6 +1,6 @@
-package services.map;
+package com.sletras.services.map;
 
-import model.Pet;
+import com.sletras.model.Pet;
 
 /**
  * Created by sergioletras on 12/02/19.

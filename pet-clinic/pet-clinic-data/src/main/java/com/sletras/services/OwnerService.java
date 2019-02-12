@@ -1,8 +1,6 @@
-package services;
+package com.sletras.services;
 
-import model.Owner;
-
-import java.util.Set;
+import com.sletras.model.Owner;
 
 /**
  * Created by sergioletras on 09/02/19.

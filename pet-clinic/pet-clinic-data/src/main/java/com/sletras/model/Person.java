@@ -1,4 +1,4 @@
-package model;
+package com.sletras.model;
 
 /**
  * Created by sergioletras on 07/02/19.
