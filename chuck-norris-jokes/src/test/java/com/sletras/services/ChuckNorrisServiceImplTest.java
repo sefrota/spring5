@@ -1,5 +1,6 @@
 package com.sletras.services;
 
+import guru.springframework.norris.chuck.ChuckNorrisQuotes;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +13,7 @@ public class ChuckNorrisServiceImplTest {
 
     @Before
     public void setup(){
-        chuckNorrisService = new ChuckNorrisServiceImpl();
+        chuckNorrisService = new ChuckNorrisServiceImpl(new ChuckNorrisQuotes());
     }
 
     @Test
