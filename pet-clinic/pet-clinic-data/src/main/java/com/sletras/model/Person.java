@@ -3,10 +3,13 @@ package com.sletras.model;
 /**
  * Created by sergioletras on 07/02/19.
  */
-public class Person extends BaseEntity{
+public class Person extends BaseEntity<Long>{
 
     private String firstName;
     private String lastName;
+
+    public Person() {
+    }
 
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
