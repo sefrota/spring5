@@ -2,12 +2,14 @@ package com.sletras.services.map;
 
 import com.sletras.model.Owner;
 import com.sletras.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
 /**
  * Created by sergioletras on 11/02/19.
  */
+@Service
 public class OwnerServiceMap extends BaseEntityServiceMap<Owner, Long> implements OwnerService {
 
     @Override
