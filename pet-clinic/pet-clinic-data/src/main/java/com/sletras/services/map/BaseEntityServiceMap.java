@@ -7,4 +7,5 @@ import com.sletras.services.CrudService;
  */
 public class BaseEntityServiceMap<T, ID> extends AbstractServiceMap<T, ID> implements CrudService<T, ID> {
 
+
 }

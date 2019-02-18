@@ -23,7 +23,11 @@ public abstract class AbstractServiceMap<T, ID> implements CrudService<T, ID>{
     }
 
     public T save(T object) {
-        map.put(null, object);
+        throw new UnsupportedOperationException();
+    }
+
+    public T save(ID id, T object) {
+        map.put(id, object);
         return object;
     }
 
