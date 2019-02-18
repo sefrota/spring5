@@ -5,15 +5,15 @@ import java.io.Serializable;
 /**
  * Created by sergioletras on 11/02/19.
  */
-public class BaseEntity<ID> implements Serializable {
+public class BaseEntity<ID extends Long> implements Serializable {
 
-    private ID id;
+    private Long id;
 
-    public ID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(ID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }

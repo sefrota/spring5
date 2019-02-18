@@ -1,20 +1,18 @@
 package com.sletras.services.map;
 
+import com.sletras.model.BaseEntity;
 import com.sletras.services.CrudService;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by sergioletras on 11/02/19.
  */
-public abstract class AbstractServiceMap<T, ID> implements CrudService<T, ID>{
+public abstract class AbstractServiceMap<T extends BaseEntity, ID extends Long> implements CrudService<T, ID>{
 
-    protected Map<ID, T> map = new HashMap<>();
+    protected Map<Long, T> map = new HashMap<>();
 
-    public Set findAll() {
+    public Set<T> findAll() {
         return new HashSet<>(map.values());
     }
 
@@ -23,11 +21,14 @@ public abstract class AbstractServiceMap<T, ID> implements CrudService<T, ID>{
     }
 
     public T save(T object) {
-        throw new UnsupportedOperationException();
-    }
+        if(object == null)
+            throw new RuntimeException("Object is null");
 
-    public T save(ID id, T object) {
-        map.put(id, object);
+        if(object.getId() == null)
+            object.setId(getNextId());
+
+        map.put(getNextId(), object);
+
         return object;
     }
 
@@ -37,5 +38,13 @@ public abstract class AbstractServiceMap<T, ID> implements CrudService<T, ID>{
 
     public void delete(T object){
         map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+    }
+
+    public Long getNextId(){
+        try{
+            return Collections.max(map.keySet()) + 1 ;
+        }catch (NoSuchElementException e){
+            return 1L;
+        }
     }
 }
