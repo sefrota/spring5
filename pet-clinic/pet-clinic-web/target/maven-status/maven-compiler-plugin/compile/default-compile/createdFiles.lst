@@ -1,1 +1,5 @@
+com/sletras/controllers/VetController.class
+com/sletras/controllers/OwnerController.class
+com/sletras/controllers/IndexController.class
 com/sletras/PetClinicApplication.class
+com/sletras/bootstrap/DataLoader.class
