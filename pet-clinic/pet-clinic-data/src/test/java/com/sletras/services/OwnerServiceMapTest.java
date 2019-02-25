@@ -1,5 +1,7 @@
 package com.sletras.services;
 
+import com.sletras.services.map.PetServiceMap;
+import com.sletras.services.map.PetTypeServiceMap;
 import org.junit.Before;
 import com.sletras.services.map.OwnerServiceMap;
 import org.junit.Test;
@@ -10,10 +12,12 @@ import org.junit.Test;
 public class OwnerServiceMapTest {
 
     OwnerServiceMap ownerServiceMap;
+    PetTypeServiceMap petTypeService;
+    PetServiceMap petService;
 
     @Before
     public void setup(){
-        ownerServiceMap = new OwnerServiceMap();
+        ownerServiceMap = new OwnerServiceMap(petService, petTypeService);
     }
 
     @Test

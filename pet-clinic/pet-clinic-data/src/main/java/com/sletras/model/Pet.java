@@ -9,12 +9,25 @@ public class Pet extends BaseEntity {
 
     private PetType petType;
     private Owner owner;
-    private LocalDate localDate;
+    private LocalDate birthday;
+    private String name;
 
-    public Pet(PetType petType, Owner owner, LocalDate localDate) {
+    public Pet() {
+    }
+
+    public Pet(PetType petType, Owner owner, LocalDate birthday, String name) {
         this.petType = petType;
         this.owner = owner;
-        this.localDate = localDate;
+        this.birthday = birthday;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public PetType getPetType() {
@@ -33,11 +46,11 @@ public class Pet extends BaseEntity {
         this.owner = owner;
     }
 
-    public LocalDate getLocalDate() {
-        return localDate;
+    public LocalDate getBirthday() {
+        return birthday;
     }
 
-    public void setLocalDate(LocalDate localDate) {
-        this.localDate = localDate;
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
     }
 }
