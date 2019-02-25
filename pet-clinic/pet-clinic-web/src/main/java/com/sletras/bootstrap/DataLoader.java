@@ -1,9 +1,6 @@
 package com.sletras.bootstrap;
 
-import com.sletras.model.Owner;
-import com.sletras.model.Pet;
-import com.sletras.model.PetType;
-import com.sletras.model.Vet;
+import com.sletras.model.*;
 import com.sletras.services.OwnerService;
 import com.sletras.services.PetTypeService;
 import com.sletras.services.VetService;
@@ -31,6 +28,14 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... strings) throws Exception {
 
+        int size = petTypeService.findAll().size();
+
+        if(size == 0)
+            loadData();
+
+    }
+
+    private void loadData() {
         PetType dog = new PetType();
         dog.setName("Dog");
 
@@ -81,16 +86,25 @@ public class DataLoader implements CommandLineRunner {
         vet1.setFirstName("Sonia");
         vet1.setLastName("Denison");
 
+        Specialty specialty = new Specialty();
+        specialty.setDescription("Doggies");
+
+        vet1.addSpecialty(specialty);
+
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setFirstName("Lisa");
         vet2.setLastName("Simpson");
 
+        Specialty specialty2 = new Specialty();
+        specialty.setDescription("Kitties");
+
+        vet2.addSpecialty(specialty2);
+
         vetService.save(vet2);
 
 
         System.out.println("Loaded vets...");
-
     }
 }

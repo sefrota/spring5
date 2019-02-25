@@ -1,5 +1,6 @@
 package com.sletras.model;
 
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -23,5 +24,17 @@ public class Vet extends Person {
 
     public Vet(String firstName, String lastName) {
         super(firstName, lastName);
+    }
+
+    public void addSpecialty(Specialty specialty){
+        if(specialties == null)
+            specialties = new HashSet<>();
+        specialties.add(specialty);
+    }
+
+    public void removeSpecialty(Specialty specialty){
+        if(specialties == null)
+            return;
+        specialties.remove(specialty);
     }
 }

@@ -35,6 +35,7 @@ public class OwnerServiceMap extends BaseEntityServiceMap<Owner, Long> implement
                     pet.setId(petService.save(pet).getId());
                 });
             }
+            super.save(owner);
         }
         return owner;
     }
